@@ -1,0 +1,1 @@
+export {FunnelIllustration} from './FunnelIllustration';

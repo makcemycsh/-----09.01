@@ -1,0 +1,17 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
+
+.title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px);
+}

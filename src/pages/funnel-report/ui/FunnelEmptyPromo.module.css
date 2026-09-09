@@ -1,0 +1,27 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 48px 24px;
+    background: var(--g-color-base-background);
+}
+
+.root :global(.g-placeholder-container) {
+    padding: 0;
+}
+
+.root :global(.g-placeholder-container__content) {
+    margin-block-start: 28px;
+}
+
+.root :global(.g-placeholder-container__actions) {
+    margin-block-start: 20px;
+}
+
+.root :global(.g-placeholder-container__title) {
+    max-width: 480px;
+    font-weight: 700;
+    text-align: center;
+}
