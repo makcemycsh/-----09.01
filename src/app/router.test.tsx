@@ -14,7 +14,7 @@ import {t} from '@/shared/i18n';
 function renderFunnelReport(enabled: boolean) {
     return render(
         <ThemeProvider theme="light">
-            <FeatureProvider initialFeatures={{[FEATURES.FunnelReportAccess.id]: enabled}}>
+            <FeatureProvider initialFeatures={{[FEATURES.funnelReportAccess.id]: enabled}}>
                 <MemoryRouter initialEntries={[ROUTES.funnelReport]}>
                     <AppLayout>
                         <FunnelReportGate />
@@ -25,7 +25,7 @@ function renderFunnelReport(enabled: boolean) {
     );
 }
 
-describe('FunnelReportAccess', () => {
+describe('funnel_report_access', () => {
     it('opens the BEM funnel report when the feature is disabled', () => {
         renderFunnelReport(false);
 

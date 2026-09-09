@@ -23,7 +23,7 @@ const NAV_ITEMS = [
 
 export function AppLayout({children}: AppLayoutProps) {
     const {hasFeature, setFeature} = useFeatures();
-    const funnelReportAccess = hasFeature(FEATURES.FunnelReportAccess.id);
+    const funnelReportAccess = hasFeature(FEATURES.funnelReportAccess.id);
 
     return (
         <div className={styles.root}>
@@ -36,7 +36,7 @@ export function AppLayout({children}: AppLayoutProps) {
                         size="m"
                         checked={funnelReportAccess}
                         onUpdate={(checked) =>
-                            setFeature(FEATURES.FunnelReportAccess.id, checked)
+                            setFeature(FEATURES.funnelReportAccess.id, checked)
                         }
                     />
                     <span>{t('featureToggleLabel')}</span>

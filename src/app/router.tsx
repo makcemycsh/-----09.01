@@ -8,7 +8,7 @@ import {DashboardPage} from '@/pages/dashboard';
 import {FunnelReportPage} from '@/pages/funnel-report';
 
 export function FunnelReportGate() {
-    const hasNewFunnelReport = useFeature(FEATURES.FunnelReportAccess.id);
+    const hasNewFunnelReport = useFeature(FEATURES.funnelReportAccess.id);
 
     return hasNewFunnelReport ? <FunnelReportPage /> : <BemFunnelReportPage />;
 }
