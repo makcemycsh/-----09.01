@@ -14,10 +14,11 @@ interface AppLayoutProps {
 }
 
 const NAV_ITEMS = [
-    {to: ROUTES.dashboard, labelKey: 'navAudience' as const, disabled: true},
-    {to: ROUTES.dashboard, labelKey: 'navEvents' as const, disabled: true},
-    {to: ROUTES.funnelReport, labelKey: 'navFunnels' as const, disabled: false},
-    {to: ROUTES.dashboard, labelKey: 'navRetention' as const, disabled: true},
+    {to: ROUTES.dashboard, labelKey: 'dashboardTitle' as const, disabled: false, end: true},
+    {to: ROUTES.dashboard, labelKey: 'navAudience' as const, disabled: true, end: true},
+    {to: ROUTES.dashboard, labelKey: 'navEvents' as const, disabled: true, end: true},
+    {to: ROUTES.funnelReport, labelKey: 'navFunnels' as const, disabled: false, end: false},
+    {to: ROUTES.dashboard, labelKey: 'navRetention' as const, disabled: true, end: true},
 ];
 
 export function AppLayout({children}: AppLayoutProps) {
@@ -55,6 +56,7 @@ export function AppLayout({children}: AppLayoutProps) {
                             <NavLink
                                 key={item.labelKey}
                                 to={item.to}
+                                end={item.end}
                                 className={({isActive}) =>
                                     [styles.navItem, isActive ? styles.navItemActive : '']
                                         .filter(Boolean)
